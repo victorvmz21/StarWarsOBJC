@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Person View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="VMZPersonViewController" customModule="StarWarsApi_objc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-wars-backgrounds-25" translatesAutoresizingMaskIntoConstraints="NO" id="oSh-m9-shY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Person Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMp-ER-nQz">
+                                <rect key="frame" x="152.5" y="438" width="109" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Personn Heigh)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96Z-x6-23o">
+                                <rect key="frame" x="126" y="471.5" width="162" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Cc3-3M-sXB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="X1c-gE-uug"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Cc3-3M-sXB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="69I-f4-TdW"/>
+                            <constraint firstItem="HMp-ER-nQz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6qq-v8-dFs"/>
+                            <constraint firstItem="96Z-x6-23o" firstAttribute="centerX" secondItem="HMp-ER-nQz" secondAttribute="centerX" id="BZj-9C-Waq"/>
+                            <constraint firstItem="96Z-x6-23o" firstAttribute="top" secondItem="HMp-ER-nQz" secondAttribute="bottom" constant="13.5" id="E19-rH-0k7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oSh-m9-shY" secondAttribute="trailing" id="KT8-iQ-hdZ"/>
+                            <constraint firstItem="oSh-m9-shY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MrS-yq-xwI"/>
+                            <constraint firstAttribute="bottom" secondItem="oSh-m9-shY" secondAttribute="bottom" id="bsc-5j-YYf"/>
+                            <constraint firstItem="Cc3-3M-sXB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m3z-oK-FvZ"/>
+                            <constraint firstItem="oSh-m9-shY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mKR-u8-bTw"/>
+                            <constraint firstItem="HMp-ER-nQz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qJ1-on-Hc9"/>
+                            <constraint firstItem="Cc3-3M-sXB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rwE-wG-9O4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="personHeight" destination="96Z-x6-23o" id="qVt-a7-IRt"/>
+                        <outlet property="personNameLabel" destination="HMp-ER-nQz" id="qcd-xz-HHo"/>
+                        <outlet property="searchBar" destination="Cc3-3M-sXB" id="A0g-sQ-RWl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star-wars-backgrounds-25" width="1920" height="1080"/>
+    </resources>
+</document>
